@@ -164,7 +164,8 @@ class MyGame(arcade.Window):
         #F.write(str(int(self.distance_car))+"\n")      
         if(self.resetCount>=120):
             #storage.save(nn, filepath=f'Saves/Rede2_4-10-3/motorista{amostra}_{CODINOME}_g{self.resetCount}_d{self.maxDistance:.0f}.hdf5')
-            sys.exit()   
+        #    sys.exit()   
+            print("oi")
 
     def on_draw(self):
         """ Render the screen. """

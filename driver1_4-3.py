@@ -133,7 +133,8 @@ class MyGame(arcade.Window):
         #fundo.center_y = 300        
         #self.barreira_list.append(fundo)  
         
-        #Importar rede antiga        
+        #Importar rede antiga       
+        ''' 
         for filename in os.listdir('Saves/Rede1_4-3/'):
             if filename.startswith('SavedDriver_+'+CODINOME+'_'):                
                 dados = re.findall('\d+',filename)
@@ -143,7 +144,7 @@ class MyGame(arcade.Window):
                 print(dados[2])
                 save = "Saves/Rede1_4-3/"+filename
                 storage.load(nn, filepath=save)
-
+        '''
         pass
 
     def on_mouse_press(self, x, y, button, modifiers):
@@ -156,11 +157,12 @@ class MyGame(arcade.Window):
         self.cone_list.append(cone)   
 
     def reset_log(self):                
-        F = open("Logs/Rede1_4-3/R1_"+str(amostra)+".txt","a")               
-        F.write(str(int(self.distance_car))+"\n")
+        #F = open("Logs/Rede1_4-3/R1_"+str(amostra)+".txt","a")               
+        #F.write(str(int(self.distance_car))+"\n")
         if(self.resetCount>=120):
-            storage.save(nn, filepath=f"Saves/Rede1_4-3/motorista{amostra}_{CODINOME}_g{self.resetCount}_d{self.maxDistance:.0f}.hdf5")
-            sys.exit()
+            #storage.save(nn, filepath=f"Saves/Rede1_4-3/motorista{amostra}_{CODINOME}_g{self.resetCount}_d{self.maxDistance:.0f}.hdf5")
+            #sys.exit()
+            print("120")
         
         
 
